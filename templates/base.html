@@ -72,6 +72,11 @@
         <link href="{{ SITEURL }}/theme/css/typogrify.css" rel="stylesheet">
     {% endif %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css"/>
+    <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+    {% if PLUSGALLERY %}
+        <link href="{{ SITEURL }}/theme/css/plusgallery.css" rel="stylesheet">
+        <script src="{{ SITEURL }}/theme/js/plusgallery.js"></script>
+    {% endif %}
     {% if CUSTOM_CSS %}
         <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
     {% endif %}
@@ -157,13 +162,13 @@
 </div>
 {% include 'includes/footer.html' %}
 
-<script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
+
 
 {% include 'includes/github-js.html' %}
 {% include 'includes/disqus_script.html' %}

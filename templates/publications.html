@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Publications{% endblock %}
+{% block content %}
+
+<section id="content" class="body">
+    <h1 class="entry-title">Publications</h1>
+    <div class="entry-content">
+
+    <h3 class="entry-title">Journals</h3>
+    <ul class="biblist">
+    {% for key, type, _, text, pdf, slides, poster, code in publications if type == 'article' %}
+    <li id="{{ key }}">{{ text }}
+    {% for label, target in [('PDF', pdf), ('Slides', slides),
+                             ('Poster', poster), ('Code', code)] %}
+    {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+    {% endfor %}
+    </li>
+    {% endfor %}
+    </ul>
+
+    <h3 class="entry-title">Conference Papers</h3>
+    <ul class="biblist">
+    {% for key, type, _, text, pdf, slides, poster, code in publications if type == 'inproceedings' %}
+    <li id="{{ key }}">{{ text }}
+    {% for label, target in [('PDF', pdf), ('Slides', slides),
+                             ('Poster', poster), ('Code', code)] %}
+    {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+    {% endfor %}
+    </li>
+    {% endfor %}
+    </ul>
+
+    <h3 class="entry-title">Workshops etc.</h3>
+    <ul class="biblist">
+    {% for key, type, _, text, pdf, slides, poster, code in publications if type == 'misc' %}
+    <li id="{{ key }}">{{ text }}
+    {% for label, target in [('PDF', pdf), ('Slides', slides),
+                             ('Poster', poster), ('Code', code)] %}
+    {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+    {% endfor %}
+    </li>
+    {% endfor %}
+    </ul>
+
+    <h3 class="entry-title">PhD Thesis</h3>
+    <ul class="biblist">
+    {% for key, type, _, text, pdf, slides, poster, code in publications if type == 'phdthesis' %}
+    <li id="{{ key }}">{{ text }}
+    {% for label, target in [('PDF', pdf), ('Slides', slides),
+                             ('Poster', poster), ('Code', code)] %}
+    {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+    {% endfor %}
+    </li>
+    {% endfor %}
+    </ul>
+    
+    </div>
+</section>
+{% endblock %}

@@ -244,4 +244,18 @@ If you want more examples of what you could do with this theme, have a [look her
 
 ![](screenshot-article.png)
 
+NOTES from Dan
+==============
+
+Changes:
+
+1. I have added the sandstone bootswatch theme
+2. I have added in a patched version [plusgallery](http://www.plusgallery.net/)
+   to work with this theme.
+3. I have made a few small mods to make this theme more compatible with
+   academic style sites (included a `publications.html` template).
+
+Though if you want to use the `publications.html` template you need to use my
+patched version of 
+[pelican-bibtex](https://github.com/dsteinberg/pelican-bibtex).
 
