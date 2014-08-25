@@ -18,6 +18,10 @@ body {
     padding-bottom: 0px;
 }
 
+.list-group-flush {
+    margin-left: -15px;
+}
+
 .list-group-item {
     border: none;
 }
@@ -40,6 +44,14 @@ body {
 
 .tag-4 {
     font-size: 6pt;
+}
+
+.side-content {
+    border-left: solid #282828 1px;
+}
+
+#aboutme {
+    font-size: small;
 }
 
 #sidebar {
