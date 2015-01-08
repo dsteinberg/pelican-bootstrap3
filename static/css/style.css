@@ -103,6 +103,10 @@ a, a:hover {
     margin-bottom: 2px;
 }
 
+.entry-content p {
+    text-align: justify;
+}
+
 .floatright, .align-right {
     float: right;
 }
