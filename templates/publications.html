@@ -30,6 +30,18 @@
     {% endfor %}
     </ul>
 
+    <h3 class="entry-title">Chapters</h3>
+    <ul class="biblist">
+    {% for key, type, _, text, pdf, slides, poster, code in publications if type == 'incollection' %}
+    <li id="{{ key }}">{{ text }}
+    {% for label, target in [('PDF', pdf), ('Slides', slides),
+                             ('Poster', poster), ('Code', code)] %}
+    {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+    {% endfor %}
+    </li>
+    {% endfor %}
+    </ul>
+
     <h3 class="entry-title">Workshops etc.</h3>
     <ul class="biblist">
     {% for key, type, _, text, pdf, slides, poster, code in publications if type == 'misc' %}
